@@ -1,3 +1,4 @@
+import { OnInit, OnChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { Component, EventEmitter, Output, ChangeDetectionStrategy, Input } from '@angular/core';
@@ -47,7 +48,9 @@ export class HerosSearchFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted.emit();
+    if (Object.values(this.searchForm.value).some(Boolean)) {
+      this.submitted.emit();
+    }
   }
 
   onResetFilterTags() {

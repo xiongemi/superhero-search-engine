@@ -9,4 +9,4 @@ import { State } from '@ngxs/store';
     errors: {}
   }
 })
-export class HerosSearchFormState {}
+export class HerosSearchFormState { }

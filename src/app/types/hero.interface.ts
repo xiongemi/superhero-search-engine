@@ -10,8 +10,8 @@ export interface Hero {
     race: string;
     height: string[];
     weight: string[];
-    eyeColor: string[];
-    hairColor: string[];
+    eyeColor: string;
+    hairColor: string;
   };
   biography: {
     fullName: string;

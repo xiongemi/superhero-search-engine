@@ -7,3 +7,6 @@ export const getHerosSearchFormState = (appState: AppStateModel): HerosSearchFor
 
 export const getHerosSearchFormValue = (appState: AppStateModel): HerosSearchFormValueModel =>
   getHerosSearchFormState(appState).model;
+
+export const isHerosSearchFormFilled = (appState: AppStateModel): boolean =>
+  Object.values(getHerosSearchFormValue(appState)).some(Boolean);
