@@ -1,0 +1,3 @@
+<mat-paginator [length]="length" [pageSize]="pageSize$ | async" [pageIndex]="pageIndex$ | async" [pageSizeOptions]="[12, 24, 36]"
+  class="db" (page)="pageChanged($event)">
+</mat-paginator>

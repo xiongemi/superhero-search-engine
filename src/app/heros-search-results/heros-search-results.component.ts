@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { GetSuperheros } from '../store/heros/heros.actions';
 import { Observable } from 'rxjs';
 import { Hero } from '../types/hero.interface';
-import { getHeros, getFilteredHeros } from '../store/heros/heros.selectors';
+import { getHeros, getFilteredHeros, getHerosLength, getFilteredHerosOnPage } from '../store/heros/heros.selectors';
 import { HerosSearchFormValueModel } from '../hero-search-form/types/heros-search-form-value-model.interface';
 import { Gender } from '../types/gender.enum';
 import { Race } from '../types/race.enum';
@@ -18,6 +18,7 @@ import { Alignment } from '../types/alignment.enum';
 })
 export class HerosSearchResultsComponent implements OnInit {
   heros$: Observable<Hero[]>;
+  herosLength$: Observable<number>;
   formValue: HerosSearchFormValueModel;
 
   constructor(private store: Store, private route: ActivatedRoute) { }
@@ -31,6 +32,7 @@ export class HerosSearchResultsComponent implements OnInit {
       alignment: formValueParamMap.get('aligment') as Alignment
     }
     this.store.dispatch(new GetSuperheros());
-    this.heros$ = this.store.select(getFilteredHeros);
+    this.heros$ = this.store.select(getFilteredHerosOnPage);
+    this.herosLength$ = this.store.select(getHerosLength);
   }
 }

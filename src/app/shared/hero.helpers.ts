@@ -38,7 +38,7 @@ export function getHeroAlignment(hero: Hero): Alignment {
 export function doesHeroMatchFormValue(hero: Hero, formValue: HerosSearchFormValueModel) {
   let isMatch = true;
   if (formValue.name && formValue.name.length > 2) {
-    isMatch = compareTwoStrings(hero.name, formValue.name) > 0.5 || compareTwoStrings(hero.biography.fullName, formValue.name) > 0.5;
+    isMatch = hero.slug.includes(formValue.name.toLowerCase()) || compareTwoStrings(hero.name, formValue.name) > 0.4 || compareTwoStrings(hero.biography.fullName, formValue.name) > 0.4;
   }
   if (formValue.gender) {
     isMatch = isMatch && getHeroGender(hero) === formValue.gender;

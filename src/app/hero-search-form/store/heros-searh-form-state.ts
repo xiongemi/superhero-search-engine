@@ -1,4 +1,6 @@
-import { State } from '@ngxs/store';
+import { State, Action, StateContext } from '@ngxs/store';
+import { UpdateFormValue } from '@ngxs/form-plugin';
+import { GoBackToFirstPage } from 'src/app/heros-search-results/store/heros-search-results.actions';
 
 @State({
   name: 'herosSearchForm',
@@ -9,4 +11,10 @@ import { State } from '@ngxs/store';
     errors: {}
   }
 })
-export class HerosSearchFormState { }
+export class HerosSearchFormState {
+
+  @Action(UpdateFormValue)
+  goBackToFirstPage(ctx: StateContext<HerosSearchFormState>) {
+    ctx.dispatch(new GoBackToFirstPage());
+  }
+}

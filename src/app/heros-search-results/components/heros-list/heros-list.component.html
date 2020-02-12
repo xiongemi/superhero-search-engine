@@ -1,7 +1,8 @@
-<div class="flex flex-wrap justify-between">
-  <hse-hero-card *ngFor="let hero of heros" [hero]="hero" class="w-100 w-30-l w-50-m h-100 mb3">
-
-  </hse-hero-card>
+<hse-heros-paginator [length]="herosLength"></hse-heros-paginator>
+<div class="flex flex-row-ns flex-wrap">
+  <div *ngFor="let hero of heros" class="w-100 w-50-m w-third-l pa2">
+    <hse-hero-card [hero]="hero" class="h-100 db">
+    </hse-hero-card>
+  </div>
 </div>
-<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" class="db">
-</mat-paginator>
+<hse-heros-paginator [length]="herosLength"></hse-heros-paginator>
