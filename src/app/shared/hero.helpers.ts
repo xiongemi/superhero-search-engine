@@ -12,7 +12,7 @@ export function getHeroGender(hero: Hero): Gender {
   if (hero.appearance.gender === 'Female') {
     return Gender.Female;
   }
-  return Gender.Other
+  return Gender.Other;
 }
 
 export function getHeroRace(hero: Hero): Race {

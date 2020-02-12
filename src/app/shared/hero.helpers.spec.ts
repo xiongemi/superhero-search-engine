@@ -1,4 +1,4 @@
-import { getHeroGender, getHeroAlignment, getHeroRace, doesHeroMatchFormValue } from "./hero.helpers";
+import { getHeroGender, getHeroAlignment, getHeroRace, doesHeroMatchFormValue } from './hero.helpers';
 import { mockMaleHumanHero, mockOtherNonHumanNeutral } from '../types/heros.mock';
 import { Gender } from '../types/gender.enum';
 import { Race } from '../types/race.enum';

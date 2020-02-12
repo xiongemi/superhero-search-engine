@@ -13,6 +13,6 @@ import { HerosPaginator } from './components/paginator/paginator.component';
 
 @NgModule({
   declarations: [HerosSearchResultsComponent, HerosListComponent, HeroCardComponent, HerosPaginator],
-  imports: [CommonModule, MaterialModule, HerosSearchFormModule, HerosSearchResultsRoutingModule, FlexLayoutModule, NgxsModule.forFeature([HerosSearchResultsState]),]
+  imports: [CommonModule, MaterialModule, HerosSearchFormModule, HerosSearchResultsRoutingModule, FlexLayoutModule, NgxsModule.forFeature([HerosSearchResultsState]), ]
 })
 export class HerosSearchResultsModule { }

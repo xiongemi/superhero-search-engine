@@ -30,7 +30,7 @@ export class HerosSearchResultsComponent implements OnInit {
       gender: formValueParamMap.get('gender') as Gender,
       race: formValueParamMap.get('race') as Race,
       alignment: formValueParamMap.get('aligment') as Alignment
-    }
+    };
     this.store.dispatch(new GetSuperheros());
     this.heros$ = this.store.select(getFilteredHerosOnPage);
     this.herosLength$ = this.store.select(getHerosLength);

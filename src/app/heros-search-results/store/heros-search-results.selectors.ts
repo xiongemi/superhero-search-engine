@@ -12,8 +12,8 @@ export const getPageEvent = (appState: AppStateModel): PageEvent => {
 
 export const getPageSize = (appState: AppStateModel): number => {
   return getPageEvent(appState).pageSize;
-}
+};
 
 export const getPageIndex = (appState: AppStateModel): number => {
   return getPageEvent(appState).pageIndex;
-}
+};

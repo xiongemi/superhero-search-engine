@@ -1,4 +1,4 @@
-import { AppStateModel } from "../app-state-model.interface";
+import { AppStateModel } from '../app-state-model.interface';
 import { HerosStateModel } from './heros-state-model.interface';
 import { Hero } from 'src/app/types/hero.interface';
 import { createSelector } from '@ngxs/store';
