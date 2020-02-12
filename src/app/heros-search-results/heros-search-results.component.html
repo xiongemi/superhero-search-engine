@@ -1,0 +1,4 @@
+<hse-heros-search-form class="db mb3" [formValue]="formValue"></hse-heros-search-form>
+<hse-heros-list class="db" [heros]="heros$ | async" [herosLength]="herosLength$ | async" *ngIf="herosLength$ | async">
+</hse-heros-list>
+<h3 class="tc" *ngIf="!(herosLength$ | async)">No Superheros found~</h3>
