@@ -12,7 +12,6 @@ import { GoBackToFirstPage } from 'src/app/heros-search-results/store/heros-sear
   }
 })
 export class HerosSearchFormState {
-
   @Action(UpdateFormValue)
   goBackToFirstPage(ctx: StateContext<HerosSearchFormState>) {
     ctx.dispatch(new GoBackToFirstPage());

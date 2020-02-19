@@ -1,0 +1,92 @@
+<table>
+  <tr>
+    <th>Intelligence:</th>
+    <td>
+      <mat-slider
+        thumbLabel
+        [min]="0"
+        [max]="100"
+        [value]="hero?.powerstats?.intelligence"
+        [disabled]="true"
+        tickInterval="auto"
+        color="primary"
+      ></mat-slider>
+    </td>
+    <td>{{ hero?.powerstats?.intelligence }}</td>
+  </tr>
+  <tr>
+    <th>Strength:</th>
+    <td>
+      <mat-slider
+        thumbLabel
+        [min]="0"
+        [max]="100"
+        [value]="hero?.powerstats?.strength"
+        [disabled]="true"
+        tickInterval="auto"
+        color="primary"
+      ></mat-slider>
+    </td>
+    <td>{{ hero?.powerstats?.strength }}</td>
+  </tr>
+  <tr>
+    <th>Speed:</th>
+    <td>
+      <mat-slider
+        thumbLabel
+        [min]="0"
+        [max]="100"
+        [value]="hero?.powerstats?.speed"
+        [disabled]="true"
+        tickInterval="auto"
+        color="primary"
+      ></mat-slider>
+    </td>
+    <td>{{ hero?.powerstats?.speed }}</td>
+  </tr>
+  <tr>
+    <th>Durability:</th>
+    <td>
+      <mat-slider
+        thumbLabel
+        [min]="0"
+        [max]="100"
+        [value]="hero?.powerstats?.durability"
+        [disabled]="true"
+        tickInterval="auto"
+        color="primary"
+      ></mat-slider>
+    </td>
+    <td>{{ hero?.powerstats?.durability }}</td>
+  </tr>
+  <tr>
+    <th>Power:</th>
+    <td>
+      <mat-slider
+        thumbLabel
+        [min]="0"
+        [max]="100"
+        [value]="hero?.powerstats?.power"
+        [disabled]="true"
+        tickInterval="auto"
+        color="primary"
+      ></mat-slider>
+    </td>
+    <td>{{ hero?.powerstats?.power }}</td>
+  </tr>
+  <tr>
+    <th>Combat:</th>
+    <td>
+      <mat-slider
+        thumbLabel
+        [min]="0"
+        [max]="100"
+        [value]="hero?.powerstats?.combat"
+        [disabled]="true"
+        tickInterval="auto"
+        color="primary"
+      ></mat-slider>
+    </td>
+    <td>{{ hero?.powerstats?.combat }}</td>
+  </tr>
+</table>

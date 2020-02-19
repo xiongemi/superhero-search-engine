@@ -8,9 +8,13 @@ import { Hero } from '../../types/hero.interface';
   providedIn: 'root'
 })
 export class HerosService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getHeros(): Observable<Hero[]> {
     return this.httpClient.get<Hero[]>(environment.herosApis.all);
+  }
+
+  getHeroById(id: number): Observable<Hero> {
+    return this.httpClient.get<Hero>(`${environment.herosApis.id}/${id}.json`);
   }
 }

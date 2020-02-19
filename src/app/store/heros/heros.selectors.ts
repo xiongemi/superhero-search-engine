@@ -16,15 +16,23 @@ export const getHeros = (appState: AppStateModel): Hero[] => {
   return getHerosState(appState).heros;
 };
 
-export const getFilteredHeros = createSelector([getHeros, getHerosSearchFormValue], (heros: Hero[], formValue: HerosSearchFormValueModel) => {
-  return heros.filter(hero => {
-    return doesHeroMatchFormValue(hero, formValue);
-  });
-});
+export const getFilteredHeros = createSelector(
+  [getHeros, getHerosSearchFormValue],
+  (heros: Hero[], formValue: HerosSearchFormValueModel) => {
+    return heros.filter(hero => {
+      return doesHeroMatchFormValue(hero, formValue);
+    });
+  }
+);
 
 export const getHerosLength = createSelector([getFilteredHeros], heros => heros.length);
 
-export const getFilteredHerosOnPage = createSelector([getFilteredHeros, getPageEvent], (heros: Hero[], pageEvent: PageEvent) => {
-  return heros.slice(pageEvent.pageSize * pageEvent.pageIndex, pageEvent.pageSize * (pageEvent.pageIndex + 1));
-});
-
+export const getFilteredHerosOnPage = createSelector(
+  [getFilteredHeros, getPageEvent],
+  (heros: Hero[], pageEvent: PageEvent) => {
+    return heros.slice(
+      pageEvent.pageSize * pageEvent.pageIndex,
+      pageEvent.pageSize * (pageEvent.pageIndex + 1)
+    );
+  }
+);

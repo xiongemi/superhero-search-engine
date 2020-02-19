@@ -1,0 +1,9 @@
+table {
+  border-spacing: 1rem;
+}
+tr {
+  height: 2rem;
+}
+th {
+  text-align: right;
+}

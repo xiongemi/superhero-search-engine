@@ -4,18 +4,15 @@ import { GetSuperheros } from './heros.actions';
 import { HerosService } from '../../shared/services/heros.service';
 import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
+import { initHerosState } from './heros-state.init.const';
 
 @State<HerosStateModel>({
   name: 'heros',
-  defaults: {
-    heros: [],
-    loading: false,
-    error: null
-  }
+  defaults: { ...initHerosState }
 })
 @Injectable()
 export class HerosState {
-  constructor(private herosService: HerosService) { }
+  constructor(private herosService: HerosService) {}
 
   @Action(GetSuperheros)
   getHeros(ctx: StateContext<HerosStateModel>) {

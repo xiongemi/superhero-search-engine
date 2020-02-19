@@ -15,7 +15,7 @@ import { ChangePageAction, GoBackToFirstPage } from './heros-search-results.acti
 })
 @Injectable()
 export class HerosSearchResultsState {
-  constructor() { }
+  constructor() {}
 
   @Action(ChangePageAction)
   changePage(ctx: StateContext<HerosSearchResultsStateModel>, action: ChangePageAction) {
@@ -26,6 +26,4 @@ export class HerosSearchResultsState {
   goBackToFirstPage(ctx: StateContext<HerosSearchResultsStateModel>, action: ChangePageAction) {
     ctx.patchState({ pageEvent: { ...ctx.getState().pageEvent, pageIndex: 0 } });
   }
-
-
 }

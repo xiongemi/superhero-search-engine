@@ -11,6 +11,10 @@ const routes: Routes = [
         m => m.HerosSearchResultsModule
       )
   },
+  {
+    path: 'details',
+    loadChildren: () => import('./hero-details/hero-details.module').then(m => m.HerosDetailsModule)
+  },
   { path: '**', redirectTo: '/' }
 ];
 

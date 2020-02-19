@@ -11,7 +11,5 @@ export class HerosListComponent {
   @Input() heros: Hero[];
   @Input() herosLength: number;
 
-  changePage(pageEvent: PageEvent) {
-
-  }
+  changePage(pageEvent: PageEvent) {}
 }

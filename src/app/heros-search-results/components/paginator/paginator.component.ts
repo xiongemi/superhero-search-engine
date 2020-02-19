@@ -15,7 +15,7 @@ export class HerosPaginator implements OnInit {
   pageSize$: Observable<number>;
   pageIndex$: Observable<number>;
 
-  constructor(private store: Store) { }
+  constructor(private store: Store) {}
 
   ngOnInit() {
     this.pageIndex$ = this.store.select(getPageIndex);
