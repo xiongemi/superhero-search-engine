@@ -35,17 +35,23 @@
       <mat-radio-group aria-labelledby="alignment-label" formControlName="alignment">
         <mat-radio-button [value]="Alignment.Hero" class="mr2">{{
           Alignment.Hero
-          }}</mat-radio-button>
+        }}</mat-radio-button>
         <mat-radio-button [value]="Alignment.Villian" class="mr2">{{
           Alignment.Villian
-          }}</mat-radio-button>
+        }}</mat-radio-button>
         <mat-radio-button [value]="Alignment.Neutral" class="mr2">{{
           Alignment.Neutral
-          }}</mat-radio-button>
+        }}</mat-radio-button>
       </mat-radio-group>
     </div>
     <mat-action-row>
-      <button type="button" mat-button mat-raised-button (click)="onResetFilterTags()">
+      <button
+        type="button"
+        mat-button
+        mat-raised-button
+        (click)="onResetFilterTags()"
+        color="accent"
+      >
         Reset
       </button>
     </mat-action-row>

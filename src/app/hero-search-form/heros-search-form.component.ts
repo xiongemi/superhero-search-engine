@@ -1,4 +1,4 @@
-import { OnInit, OnChanges } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { Component, EventEmitter, Output, ChangeDetectionStrategy, Input } from '@angular/core';
@@ -28,7 +28,9 @@ export class HerosSearchFormComponent implements OnInit {
 
   ngOnInit() {
     if (this.formValue) {
-      this.searchForm.patchValue(this.formValue);
+      setTimeout(() => {
+        this.searchForm.reset(this.formValue);
+      });
     }
   }
 
@@ -54,8 +56,6 @@ export class HerosSearchFormComponent implements OnInit {
   }
 
   onResetFilterTags() {
-    ['gender', 'race', 'alignment'].forEach(key => {
-      this.searchForm.get(key).reset();
-    });
+    this.searchForm.reset();
   }
 }

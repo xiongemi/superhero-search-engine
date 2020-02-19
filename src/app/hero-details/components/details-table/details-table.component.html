@@ -1,0 +1,59 @@
+<table>
+  <tr>
+    <th>Aliases:</th>
+    <td>
+      {{ hero?.biography?.aliases.join(', ') }}
+    </td>
+  </tr>
+  <tr>
+    <th>Alter Egos:</th>
+    <td>
+      {{ hero?.biography?.alterEgos }}
+    </td>
+  </tr>
+  <tr>
+    <th>Place of Birth <mat-icon>place</mat-icon>:</th>
+    <td>
+      {{ hero?.biography?.placeOfBirth }}
+    </td>
+  </tr>
+  <tr>
+    <th>1st <mat-icon>calendar_today</mat-icon>:</th>
+    <td>
+      {{ hero?.biography?.firstAppearance }}
+    </td>
+  </tr>
+  <tr>
+    <th>Publisher <mat-icon>menu_book</mat-icon>:</th>
+    <td>
+      {{ hero?.biography?.publisher }}
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Occupation
+      <mat-icon>work</mat-icon>:
+    </th>
+    <td>
+      {{ hero?.work?.occupation }}
+    </td>
+  </tr>
+  <tr>
+    <th>Base:</th>
+    <td>
+      {{ hero?.work?.base }}
+    </td>
+  </tr>
+  <tr>
+    <th>Group <mat-icon>group</mat-icon>:</th>
+    <td>
+      {{ hero?.connections?.groupAffiliation }}
+    </td>
+  </tr>
+  <tr>
+    <th>Relatives:</th>
+    <td>
+      {{ hero?.connections?.relatives }}
+    </td>
+  </tr>
+</table>

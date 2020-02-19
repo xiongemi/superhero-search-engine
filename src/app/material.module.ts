@@ -9,6 +9,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatDividerModule } from '@angular/material/divider';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -23,7 +26,10 @@ import { NgModule } from '@angular/core';
     MatExpansionModule,
     MatBadgeModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule,
+    MatSliderModule,
+    MatDividerModule
   ],
   exports: [
     MatInputModule,
@@ -36,7 +42,10 @@ import { NgModule } from '@angular/core';
     MatExpansionModule,
     MatBadgeModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule,
+    MatSliderModule,
+    MatDividerModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}

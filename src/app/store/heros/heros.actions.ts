@@ -1,3 +1,3 @@
 export class GetSuperheros {
-  static readonly type = '[Superheros] Get';
+  static readonly type = '[Heros] Get';
 }
