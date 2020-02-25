@@ -1,4 +1,4 @@
-<mat-card class="w-100">
+<mat-card>
   <mat-card-header>
     <img mat-card-avatar [src]="hero?.images?.sm" />
     <mat-card-title>{{ hero?.name }}</mat-card-title>
@@ -7,13 +7,13 @@
 
   <mat-card-content>
     <div class="flex flex-column flex-row-ns items-center">
-      <img [src]="hero?.images?.md" alt="Photo of {{ hero?.name }}" />
+      <img [src]="hero?.images?.md" alt="Photo of {{ hero?.name }}" class="mv2" />
       <hse-appearance-table class="ml5-ns" [hero]="hero"></hse-appearance-table>
     </div>
     <mat-divider></mat-divider>
-    <div class="flex flex-column flex-row-ns items-center">
+    <div class="flex flex-column flex-row-ns items-start">
       <hse-power-stats [hero]="hero" class="ma3 shadow-1 ba-1"></hse-power-stats>
-      <hse-details-table class="ml5-ns" [hero]="hero"></hse-details-table>
+      <hse-details-table [hero]="hero"></hse-details-table>
     </div>
   </mat-card-content>
 </mat-card>

@@ -9,7 +9,7 @@ import { getHeroDetails } from './store/hero-details.selectors';
 @Component({
   selector: 'hse-heros-details',
   templateUrl: './hero-details.component.html',
-  host: { class: 'flex flex-column items-center' }
+  host: { class: 'flex flex-column items-center mh5-xl' }
 })
 export class HeroDetailsComponent implements OnInit, OnDestroy {
   hero: Hero;
