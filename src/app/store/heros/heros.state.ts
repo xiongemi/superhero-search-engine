@@ -1,30 +1,30 @@
 import { State, Action, StateContext } from '@ngxs/store';
-import { HerosStateModel } from './heros-state-model.interface';
 import { GetSuperheros } from './heros.actions';
 import { HerosService } from '../../shared/services/heros.service';
-import { tap } from 'rxjs/operators';
+import { tap, catchError } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { initHerosState } from './heros-state.init.const';
+import { Hero } from 'src/app/types/hero.interface';
+import { HandleApiError } from '../api-error/api-error.actions';
 
-@State<HerosStateModel>({
+@State<Hero[]>({
   name: 'heros',
-  defaults: { ...initHerosState }
+  defaults: []
 })
 @Injectable()
 export class HerosState {
   constructor(private herosService: HerosService) {}
 
   @Action(GetSuperheros)
-  getHeros(ctx: StateContext<HerosStateModel>) {
-    if (ctx.getState().heros.length) {
+  getHeros(ctx: StateContext<Hero[]>) {
+    if (ctx.getState().length) {
       return;
     }
     return this.herosService.getHeros().pipe(
       tap(heros => {
-        ctx.patchState({
-          heros,
-          loading: true
-        });
+        ctx.setState(heros);
+      }),
+      catchError(error => {
+        return ctx.dispatch(new HandleApiError(new GetSuperheros()));
       })
     );
   }

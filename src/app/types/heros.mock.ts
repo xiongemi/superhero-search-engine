@@ -1,5 +1,6 @@
 import { Hero } from './hero.interface';
 
+// tslint:disable
 export const mockMaleHumanHero: Hero = {
   id: 1,
   name: 'A-Bomb',

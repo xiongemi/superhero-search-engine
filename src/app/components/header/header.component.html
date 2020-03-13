@@ -1,15 +1,15 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="flex">
   <button
-    mat-icon-button
+    mat-button
     *ngIf="showBackButton$ | async"
     aria-label="Go back to previous page"
     class="white"
     (click)="goBack()"
   >
-    <mat-icon>arrow_back_ios</mat-icon>
+    <mat-icon>arrow_back_ios</mat-icon> Back
   </button>
 
-  <a class="link white dim" [routerLink]="['/']">
+  <a class="link white dim self-center ml-auto mr-auto" [routerLink]="['/']">
     Superhero Search Engine
   </a>
 </mat-toolbar>

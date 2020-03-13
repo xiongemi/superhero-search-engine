@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/",
+            "outputPath": "dist/superhero-search-engine/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -89,6 +89,14 @@
             "production": {
               "devServerTarget": "superheros-angular:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/superhero-search-engine/",
+            "name": "Emily Xiong",
+            "email": "xiongemi@gmail.com"
           }
         }
       }
