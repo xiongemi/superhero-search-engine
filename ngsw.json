@@ -1,0 +1,94 @@
+{
+  "configVersion": 1,
+  "timestamp": 1584071975533,
+  "index": "/superhero-search-engine/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/superhero-search-engine/5-es2015.dd4c99e65e9710ab2afa.js",
+        "/superhero-search-engine/5-es5.dd4c99e65e9710ab2afa.js",
+        "/superhero-search-engine/6-es2015.3a56741b8ac2dde76f13.js",
+        "/superhero-search-engine/6-es5.3a56741b8ac2dde76f13.js",
+        "/superhero-search-engine/favicon.ico",
+        "/superhero-search-engine/index.html",
+        "/superhero-search-engine/main-es2015.2d3f2276f2c7ed8d28e3.js",
+        "/superhero-search-engine/main-es5.2d3f2276f2c7ed8d28e3.js",
+        "/superhero-search-engine/manifest.webmanifest",
+        "/superhero-search-engine/polyfills-es2015.ca64e4516afbb1b890d5.js",
+        "/superhero-search-engine/polyfills-es5.1d087d4db6b105875851.js",
+        "/superhero-search-engine/runtime-es2015.dce0f284e5bf0e3f8686.js",
+        "/superhero-search-engine/runtime-es5.dce0f284e5bf0e3f8686.js",
+        "/superhero-search-engine/styles.e5e9a078b7ad338cb926.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/superhero-search-engine/assets/icons/Icon-100.png",
+        "/superhero-search-engine/assets/icons/Icon-128.png",
+        "/superhero-search-engine/assets/icons/Icon-144.png",
+        "/superhero-search-engine/assets/icons/Icon-152.png",
+        "/superhero-search-engine/assets/icons/Icon-196.png",
+        "/superhero-search-engine/assets/icons/Icon-256.png",
+        "/superhero-search-engine/assets/icons/Icon-512.png",
+        "/superhero-search-engine/assets/icons/Icon-72.png",
+        "/superhero-search-engine/assets/material-font.woff2",
+        "/superhero-search-engine/material-font.d7e60f9d1433a45ed718.woff2"
+      ],
+      "patterns": [
+        "\\/superhero-search-engine\\/cdn\\.rawgit\\.com\\/akabab\\/superhero-api\\/0\\.2\\.0\\/api\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/superhero-search-engine/5-es2015.dd4c99e65e9710ab2afa.js": "39ca15a49122582603c3b150c69cb34d40be1fa7",
+    "/superhero-search-engine/5-es5.dd4c99e65e9710ab2afa.js": "9cc2bcc9a8da2856da1b907515d4396635846818",
+    "/superhero-search-engine/6-es2015.3a56741b8ac2dde76f13.js": "f46d5a8954b7ac4470b6847d64f73074769fc166",
+    "/superhero-search-engine/6-es5.3a56741b8ac2dde76f13.js": "37b6fdd10200a2dcd8397e035467912ac54e9855",
+    "/superhero-search-engine/assets/icons/Icon-100.png": "a9541a17a6ecf01f57393548672981f25894ed97",
+    "/superhero-search-engine/assets/icons/Icon-128.png": "be0f594fc1a7041722fac166c89fd7ec63b2366d",
+    "/superhero-search-engine/assets/icons/Icon-144.png": "df79d618ebd93a8744f11abaf3936bbfdbcc9641",
+    "/superhero-search-engine/assets/icons/Icon-152.png": "19b5add902b04c77104918b6eafb5ac217aba70c",
+    "/superhero-search-engine/assets/icons/Icon-196.png": "27bea69c272b27dbfbbb0c1e76f0b20b2b242fd1",
+    "/superhero-search-engine/assets/icons/Icon-256.png": "1052c91d3360c7009f32a45ddf01107447694ac0",
+    "/superhero-search-engine/assets/icons/Icon-512.png": "dac4e2842a654dd2a00cbde83528394838c8d7b5",
+    "/superhero-search-engine/assets/icons/Icon-72.png": "9b35137330b4f6c2c65484a6b5f6c4e18f3b6c24",
+    "/superhero-search-engine/assets/material-font.woff2": "d22573acfb7163487f48c8fcbd593f2ec5b9e729",
+    "/superhero-search-engine/favicon.ico": "291ae6169c8990596fb0d6ba5df40393d655f1ad",
+    "/superhero-search-engine/index.html": "6612bfdde78e7dc5685bbf8c1563b8963327a5d4",
+    "/superhero-search-engine/main-es2015.2d3f2276f2c7ed8d28e3.js": "9e7be6e96dd9d996c8ba15edcdd2818e1fe107c3",
+    "/superhero-search-engine/main-es5.2d3f2276f2c7ed8d28e3.js": "32bd274acb65cf396bbbbdc9853ea48373387010",
+    "/superhero-search-engine/manifest.webmanifest": "95264c07613399bab926896bf815f112d6a199b6",
+    "/superhero-search-engine/material-font.d7e60f9d1433a45ed718.woff2": "d22573acfb7163487f48c8fcbd593f2ec5b9e729",
+    "/superhero-search-engine/polyfills-es2015.ca64e4516afbb1b890d5.js": "8779ed8d9bf0580e1b50b352a9b8fd520be24433",
+    "/superhero-search-engine/polyfills-es5.1d087d4db6b105875851.js": "29c3dfd16faa921dd49165f318f9eed12a2f3be7",
+    "/superhero-search-engine/runtime-es2015.dce0f284e5bf0e3f8686.js": "6e203d602227017f44e4327d193fcfa465575620",
+    "/superhero-search-engine/runtime-es5.dce0f284e5bf0e3f8686.js": "4e86ec738acaf63a796316e9f2c57bb56270007d",
+    "/superhero-search-engine/styles.e5e9a078b7ad338cb926.css": "24736b1e776f51441ea9d8181628045e857e4f7a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
