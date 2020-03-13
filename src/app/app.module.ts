@@ -16,6 +16,8 @@ import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { ApiErrorDialogComponent } from './components/api-error-dialog/api-error-dialog.component';
 import { ApiErrorState } from './store/api-error/api-error.state';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ApiErrorDialogComponent],
@@ -30,7 +32,8 @@ import { ApiErrorState } from './store/api-error/api-error.state';
     NgxsFormPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   bootstrap: [AppComponent]
 })

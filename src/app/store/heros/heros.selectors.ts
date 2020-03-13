@@ -11,6 +11,8 @@ export const getHeros = (appState: AppStateModel): Hero[] => {
   return appState.heros;
 };
 
+export const isHerosLoaded = createSelector([getHeros], heros => !heros.length);
+
 export const getFilteredHeros = createSelector(
   [getHeros, getHerosSearchFormValue],
   (heros: Hero[], formValue: HerosSearchFormValueModel) => {

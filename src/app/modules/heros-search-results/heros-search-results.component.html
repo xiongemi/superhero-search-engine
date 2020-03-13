@@ -7,8 +7,11 @@
   *ngIf="herosLength$ | async"
 >
 </hse-heros-list>
-<h3 class="tc" *ngIf="!(herosLength$ | async)">
+<h3 class="tc" *ngIf="!(herosLength$ | async) && !(showSpinner$ | async)">
   No Superheros found~
 </h3>
 
-<mat-spinner class="tc" *ngIf="!(heros$ | async)"></mat-spinner>
+<mat-spinner
+  class="tc ml-auto mr-auto"
+  *ngIf="!(herosLength$ | async) && (showSpinner$ | async)"
+></mat-spinner>
