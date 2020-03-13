@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1584071975533,
+  "timestamp": 1584072966668,
   "index": "/superhero-search-engine/index.html",
   "assetGroups": [
     {
@@ -14,8 +14,8 @@
         "/superhero-search-engine/6-es5.3a56741b8ac2dde76f13.js",
         "/superhero-search-engine/favicon.ico",
         "/superhero-search-engine/index.html",
-        "/superhero-search-engine/main-es2015.2d3f2276f2c7ed8d28e3.js",
-        "/superhero-search-engine/main-es5.2d3f2276f2c7ed8d28e3.js",
+        "/superhero-search-engine/main-es2015.1a887e104db7a81eeaf5.js",
+        "/superhero-search-engine/main-es5.1a887e104db7a81eeaf5.js",
         "/superhero-search-engine/manifest.webmanifest",
         "/superhero-search-engine/polyfills-es2015.ca64e4516afbb1b890d5.js",
         "/superhero-search-engine/polyfills-es5.1d087d4db6b105875851.js",
@@ -62,9 +62,9 @@
     "/superhero-search-engine/assets/icons/Icon-72.png": "9b35137330b4f6c2c65484a6b5f6c4e18f3b6c24",
     "/superhero-search-engine/assets/material-font.woff2": "d22573acfb7163487f48c8fcbd593f2ec5b9e729",
     "/superhero-search-engine/favicon.ico": "291ae6169c8990596fb0d6ba5df40393d655f1ad",
-    "/superhero-search-engine/index.html": "6612bfdde78e7dc5685bbf8c1563b8963327a5d4",
-    "/superhero-search-engine/main-es2015.2d3f2276f2c7ed8d28e3.js": "9e7be6e96dd9d996c8ba15edcdd2818e1fe107c3",
-    "/superhero-search-engine/main-es5.2d3f2276f2c7ed8d28e3.js": "32bd274acb65cf396bbbbdc9853ea48373387010",
+    "/superhero-search-engine/index.html": "474c19a6bed32774947353c87425bd0b2f813bba",
+    "/superhero-search-engine/main-es2015.1a887e104db7a81eeaf5.js": "9e7b6745224b2bb4307b2a8087662bfb2e712402",
+    "/superhero-search-engine/main-es5.1a887e104db7a81eeaf5.js": "6af643cec3182a35f57e8f149b8be9fa6d18f48c",
     "/superhero-search-engine/manifest.webmanifest": "95264c07613399bab926896bf815f112d6a199b6",
     "/superhero-search-engine/material-font.d7e60f9d1433a45ed718.woff2": "d22573acfb7163487f48c8fcbd593f2ec5b9e729",
     "/superhero-search-engine/polyfills-es2015.ca64e4516afbb1b890d5.js": "8779ed8d9bf0580e1b50b352a9b8fd520be24433",
