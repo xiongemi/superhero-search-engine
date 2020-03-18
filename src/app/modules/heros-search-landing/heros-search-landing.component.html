@@ -1,0 +1,26 @@
+<img
+  class="mv3"
+  srcset="
+    /superhero-search-engine/assets/icons/Icon-128.png,
+    /superhero-search-engine/assets/icons/Icon-196.png 1.5x,
+    /superhero-search-engine/assets/icons/Icon-256.png 2x
+  "
+  src="/superhero-search-engine/assets/icons/Icon-128.png"
+  alt="Superhero Search Engine Logo"
+/>
+<hse-heros-search-form class="mv3 db" (submitted)="submitForm()"></hse-heros-search-form>
+<div>
+  <button
+    mat-button
+    mat-raised-button
+    type="submit"
+    color="primary"
+    style="margin-right: 2rem;"
+    (click)="submitForm()"
+  >
+    Superhero Search
+  </button>
+  <button mat-button mat-raised-button type="button" color="accent" (click)="goToRandomHeorId()">
+    I'm Feeling Lucky
+  </button>
+</div>

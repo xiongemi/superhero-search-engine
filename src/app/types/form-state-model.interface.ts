@@ -1,4 +1,4 @@
-export interface FormStateModel<T> {
+export interface FormStateModel<T = any> {
   model: T;
   dirty: boolean;
   status: string;

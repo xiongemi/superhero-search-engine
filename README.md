@@ -1,10 +1,19 @@
-# Superheros Search Engine Angular Ngxs
+# Superhero Search Engine Angular NGXS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+This project was created to me to try NGXS
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version ~9.
+
+## Tech Stack
+
+- Component Library: [Angular Material](https://material.angular.io/)
+- State Management: [NGXS](https://www.ngxs.io/)
+- Unit Testing: [Jest](https://jestjs.io/)
+- Backend: [Superhero Api](https://akabab.github.io/superhero-api/api/)
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/superhero-search-engine`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
