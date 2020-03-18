@@ -47,12 +47,6 @@ export class HerosSearchResultsComponent implements OnInit {
           this.store.dispatch(new GoBackToFirstPage());
         })
     );
-
-    this.subscription.add(
-      this.actions.pipe(ofActionCompleted(GetSuperheros)).subscribe(() => {
-        this.showSpinner = false;
-      })
-    );
   }
 
   ngOnDestroy() {

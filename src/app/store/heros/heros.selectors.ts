@@ -29,9 +29,11 @@ export const getHerosLength = createSelector([getFilteredHeros], heros => heros.
 export const getFilteredHerosOnPage = createSelector(
   [getFilteredHeros, getPageEvent],
   (heros: Hero[], pageEvent: PageEvent): Hero[] => {
-    return heros.slice(
-      pageEvent.pageSize * pageEvent.pageIndex,
-      pageEvent.pageSize * (pageEvent.pageIndex + 1)
+    return (
+      heros.slice(
+        pageEvent.pageSize * pageEvent.pageIndex,
+        pageEvent.pageSize * (pageEvent.pageIndex + 1)
+      ) || []
     );
   }
 );
@@ -40,7 +42,5 @@ export const getHeroIds = createSelector([getHeros], (heros: Hero[]): number[] =
   heros.map(hero => hero.id)
 );
 
-export const getRandomHeroId = createSelector(
-  [getHeroIds],
-  (ids: number[]) => ids[Math.floor(Math.random() * ids.length)]
-);
+export const getRandomHeroId = () =>
+  createSelector([getHeroIds], (ids: number[]) => ids[Math.floor(Math.random() * ids.length)]);

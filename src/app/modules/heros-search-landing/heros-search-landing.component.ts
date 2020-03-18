@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngxs/store';
 import {
@@ -14,10 +14,8 @@ import { randomHeroDetailsActionCreator } from 'src/app/store/heros/heros.action
   templateUrl: './heros-search-landing.component.html',
   host: { class: 'flex flex-column items-center' }
 })
-export class HerosSearchLandingComponent implements OnInit {
+export class HerosSearchLandingComponent {
   constructor(private store: Store, private router: Router) {}
-
-  ngOnInit() {}
 
   submitForm() {
     if (this.store.selectSnapshot(isHerosSearchFormFilled)) {
@@ -29,7 +27,7 @@ export class HerosSearchLandingComponent implements OnInit {
   }
 
   goToRandomHeorId() {
-    const id = this.store.selectSnapshot(getRandomHeroId) || Math.ceil(Math.random() * 562);
+    const id = this.store.selectSnapshot(getRandomHeroId()) || Math.ceil(Math.random() * 562);
     this.store.dispatch(randomHeroDetailsActionCreator(id));
   }
 }

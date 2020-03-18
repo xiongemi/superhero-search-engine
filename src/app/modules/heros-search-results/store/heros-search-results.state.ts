@@ -9,7 +9,9 @@ import { UpdateFormValue } from '@ngxs/form-plugin';
   name: 'herosSearchResults',
   defaults: { ...initHerosSearchResultStateModel }
 })
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HerosSearchResultsState {
   @Action(ChangePageAction)
   changePage(ctx: StateContext<HerosSearchResultsStateModel>, action: ChangePageAction) {

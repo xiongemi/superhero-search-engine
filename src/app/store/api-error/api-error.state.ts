@@ -10,7 +10,9 @@ import { map } from 'rxjs/operators';
   name: 'apiError',
   defaults: undefined
 })
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ApiErrorState {
   constructor(private dialog: MatDialog) {}
 

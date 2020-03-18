@@ -10,7 +10,9 @@ import { HandleApiError } from '../api-error/api-error.actions';
   name: 'heros',
   defaults: []
 })
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HerosState {
   constructor(private herosService: HerosService) {}
 
@@ -24,7 +26,7 @@ export class HerosState {
         ctx.setState(heros);
       }),
       catchError(error => {
-        return ctx.dispatch(new HandleApiError(new GetSuperheros()));
+        return ctx.dispatch(new HandleApiError(new GetSuperheros(), error));
       })
     );
   }

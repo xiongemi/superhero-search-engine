@@ -5,6 +5,7 @@
       <mat-icon>search</mat-icon>
     </button>
   </mat-form-field>
+
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -33,15 +34,15 @@
     <div class="mt2">
       <label id="alignment-label" class="mr2">Alignment:</label>
       <mat-radio-group aria-labelledby="alignment-label" formControlName="alignment">
-        <mat-radio-button [value]="Alignment.Hero" class="mr2">{{
-          Alignment.Hero
-        }}</mat-radio-button>
-        <mat-radio-button [value]="Alignment.Villian" class="mr2">{{
-          Alignment.Villian
-        }}</mat-radio-button>
-        <mat-radio-button [value]="Alignment.Neutral" class="mr2">{{
-          Alignment.Neutral
-        }}</mat-radio-button>
+        <mat-radio-button [value]="Alignment.Hero" class="mr2">
+          {{ Alignment.Hero }}
+        </mat-radio-button>
+        <mat-radio-button [value]="Alignment.Villian" class="mr2">
+          {{ Alignment.Villian }}
+        </mat-radio-button>
+        <mat-radio-button [value]="Alignment.Neutral" class="mr2">
+          {{ Alignment.Neutral }}
+        </mat-radio-button>
       </mat-radio-group>
     </div>
     <mat-action-row>

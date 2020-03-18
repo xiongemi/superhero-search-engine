@@ -38,12 +38,15 @@ describe('Heros State', () => {
   });
 
   it('should distapch action to handle error', done => {
-    herosService.getHeros.mockReturnValue(throwError(new HttpErrorResponse({ status: 404 })));
+    const error = new HttpErrorResponse({ status: 404 });
+    herosService.getHeros.mockReturnValue(throwError(error));
     stateContext.getState.mockReturnValue([]);
-    stateContext.dispatch.mockReturnValue(of('error'));
+    stateContext.dispatch.mockReturnValue(of(error));
 
     herosState.getHeros(stateContext as any).subscribe(() => {
-      expect(stateContext.dispatch).toHaveBeenCalledWith(new HandleApiError(new GetSuperheros()));
+      expect(stateContext.dispatch).toHaveBeenCalledWith(
+        new HandleApiError(new GetSuperheros(), error)
+      );
       done();
     });
   });

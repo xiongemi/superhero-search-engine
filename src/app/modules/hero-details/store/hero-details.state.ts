@@ -13,7 +13,9 @@ import { randomHeroDetailsActionCreator } from 'src/app/store/heros/heros.action
   name: 'heroDetails',
   defaults: { ...initHeroDetailsStateModel }
 })
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HeroDetailsState {
   constructor(private herosService: HerosService, private dialog: MatDialog) {}
 
@@ -26,8 +28,8 @@ export class HeroDetailsState {
           hero
         });
       }),
-      catchError(() => {
-        return ctx.dispatch(new HandleApiError(randomHeroDetailsActionCreator()));
+      catchError(error => {
+        return ctx.dispatch(new HandleApiError(randomHeroDetailsActionCreator(), error));
       })
     );
   }

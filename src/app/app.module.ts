@@ -27,11 +27,14 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     HerosSearchLandingModule,
     MaterialModule,
-    NgxsModule.forRoot([HerosState, ApiErrorState]),
-    NgxsLoggerPluginModule.forRoot(),
+    NgxsModule.forRoot([HerosState, ApiErrorState], {
+      developmentMode: !environment.production,
+      selectorOptions: { suppressErrors: false }
+    }),
+    NgxsLoggerPluginModule.forRoot({ disabled: environment.production }),
     NgxsFormPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot(),
-    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production }),
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
