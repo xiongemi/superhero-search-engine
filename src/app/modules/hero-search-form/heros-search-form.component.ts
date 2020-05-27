@@ -1,19 +1,17 @@
 import { OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
-import { Component, EventEmitter, Output, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Gender } from '../../types/gender.enum';
 import { Race } from '../../types/race.enum';
 import { Alignment } from '../../types/alignment.enum';
-import { HerosSearchFormValueModel } from './types/heros-search-form-value-model.interface';
 
 @Component({
   selector: 'hse-heros-search-form',
   templateUrl: './heros-search-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HerosSearchFormComponent implements OnInit {
-  @Input() formValue: HerosSearchFormValueModel;
+export class HerosSearchFormComponent {
   @Output() submitted = new EventEmitter<void>();
   Gender = Gender;
   Race = Race;
@@ -25,14 +23,6 @@ export class HerosSearchFormComponent implements OnInit {
     race: new FormControl(''),
     alignment: new FormControl('')
   });
-
-  ngOnInit() {
-    if (this.formValue) {
-      setTimeout(() => {
-        this.searchForm.reset(this.formValue);
-      });
-    }
-  }
 
   get tags() {
     return [

@@ -2,6 +2,9 @@ import { RouteReuseStrategy } from '@angular/router/';
 import { ActivatedRouteSnapshot, DetachedRouteHandle } from '@angular/router';
 import { RoutePath } from 'src/app/types/route-path.enum';
 
+/**
+ * Inspired by https://itnext.io/cache-components-with-angular-routereusestrategy-3e4c8b174d5f
+ */
 export class CacheRouteReuseStrategy implements RouteReuseStrategy {
   storedRouteHandles = new Map<string, DetachedRouteHandle>();
 
@@ -19,12 +22,12 @@ export class CacheRouteReuseStrategy implements RouteReuseStrategy {
   }
 
   retrieve(route: ActivatedRouteSnapshot): DetachedRouteHandle | null {
-    return this.storedRouteHandles.get(route?.routeConfig?.path) as DetachedRouteHandle;
+    return this.storedRouteHandles.get(this.getPath(route)) as DetachedRouteHandle;
   }
 
   shouldAttach(route: ActivatedRouteSnapshot): boolean {
     const path = this.getPath(route);
-    if (this.allowRetriveCache[path]) {
+    if (path && this.allowRetriveCache[path]) {
       return this.storedRouteHandles.has(path);
     }
 
@@ -33,7 +36,7 @@ export class CacheRouteReuseStrategy implements RouteReuseStrategy {
 
   shouldDetach(route: ActivatedRouteSnapshot): boolean {
     const path = this.getPath(route);
-    if (this.allowRetriveCache.hasOwnProperty(path)) {
+    if (path && this.allowRetriveCache.hasOwnProperty(path)) {
       return true;
     }
     return false;
@@ -44,6 +47,6 @@ export class CacheRouteReuseStrategy implements RouteReuseStrategy {
   }
 
   private getPath(route: ActivatedRouteSnapshot): string {
-    return route?.routeConfig?.path || '';
+    return route?.routeConfig?.path;
   }
 }
