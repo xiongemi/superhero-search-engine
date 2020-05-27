@@ -2,7 +2,7 @@ import { MockHerosService } from 'src/app/shared/services/heros.service.mock';
 import { HerosState } from './heros.state';
 import { MockStateContext } from '../state-context.mock';
 import { mockMaleHumanHero, mockOtherNonHumanNeutral } from 'src/app/types/heros.mock';
-import { of, throwError, Observable } from 'rxjs';
+import { of, throwError } from 'rxjs';
 import { HandleApiError } from '../api-error/api-error.actions';
 import { GetSuperheros } from './heros.actions';
 import { HttpErrorResponse } from '@angular/common/http';
